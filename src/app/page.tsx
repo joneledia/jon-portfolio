@@ -2,59 +2,66 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <header className="w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <h1 className="text-4xl font-bold">Jon Eledia</h1>
-        <nav>
-          <ul className="flex gap-4">
+    <main className="flex min-h-screen flex-col items-center justify-center p-10 bg-gray-900 text-white">
+      <header className="w-full max-w-2xl text-center">
+        <h1 className="text-6xl font-extrabold font-montserrat">Jon Eledia</h1>
+        <p className="mt-4 text-lg italic font-roboto">Software Developer</p>
+        <nav className="mt-6">
+          <ul className="flex justify-center space-x-6 font-roboto">
             <li>
-              <a href="#about">About</a>
+              <a href="/" className="text-blue-400 hover:underline">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
+              <a href="/contact" className="text-blue-400 hover:underline">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
       </header>
-      <section id="about" className="my-16">
-        <h2 className="text-3xl font-semibold">About Me</h2>
-        <p className="mt-4">
-          I am a software developer with experience in building web applications
-          using modern technologies.
+      <section id="about" className="my-16 text-center">
+        <h2 className="text-4xl font-semibold font-montserrat">About Me</h2>
+        <p className="mt-4 font-roboto">
+          I am a software developer with a passion for building dynamic websites
+          and automations that enhance user experiences and streamline
+          processes. I am proficient in JavaScript, Node.js, and React, and I am
+          always eager to learn and grow.
         </p>
       </section>
-      <section id="projects" className="my-16">
-        <h2 className="text-3xl font-semibold">Projects</h2>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Add project details here */}
-          <div className="border p-4 rounded">
-            <h3 className="text-xl font-bold">Excursbot</h3>
-            <p className="mt-2">
-              A simple twitch chat bot which users can interact with. Uses
-              nodejs and twitch IRC.
+      <section id="projects" className="my-16 text-center">
+        <h2 className="text-4xl font-semibold font-montserrat">Projects</h2>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="border border-blue-500 bg-gray-800 p-4 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold font-montserrat">Excursbot</h3>
+            <p className="mt-2 font-roboto">
+              A Twitch chat bot that allows user interaction. Built with
+              Node.js.
             </p>
           </div>
-          <div className="border p-4 rounded">
-            <h3 className="text-xl font-bold">BetterMacro</h3>
-            <p className="mt-2">Description of project 2.</p>
+          <div className="border border-blue-500 bg-gray-800 p-4 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold font-montserrat">BetterMacro</h3>
+            <p className="mt-2 font-roboto">
+              A tool for enhancing productivity in macro tasks.
+            </p>
           </div>
-          {/* Add more projects as needed */}
         </div>
       </section>
-      <section id="contact" className="my-16">
-        <h2 className="text-3xl font-semibold">Contact</h2>
-        <p className="mt-4">
-          You can reach me at{" "}
-          <a href="mailto:elediajp@gmail.com" className="text-blue-500">
+      <section id="contact" className="my-16 text-center">
+        <h2 className="text-4xl font-semibold font-montserrat">Contact</h2>
+        <p className="mt-4 font-roboto">
+          Reach me at{" "}
+          <a
+            href="mailto:elediajp@gmail.com"
+            className="text-blue-400 hover:underline"
+          >
             elediajp@gmail.com
           </a>
         </p>
       </section>
-      <footer className="w-full max-w-5xl mt-16">
-        <p className="text-center">
+      <footer className="w-full max-w-2xl mt-16 text-center">
+        <p className="font-roboto">
           &copy; {new Date().getFullYear()} Jon Eledia. All rights reserved.
         </p>
       </footer>
